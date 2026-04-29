@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sacred Heritage – Nossa Coleção de Fé</title>
+
+    <link
+      href="produtos.css"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="mainNav">
+      <a href="#" class="nav-logo">Marisa Cavalhieri Personalizados</a>
+      <ul class="nav-links">
+        <li><a href="../index/index.html">Home</a></li>
+
+        <li><a href="#familia" class="active">Família</a></li>
+        <li><a href="#santos">Santos</a></li>
+        <li><a href="#profissoes">Profissões</a></li>
+        <li><a href="#chaveiros">Chaveiros</a></li>
+        <li><a href="#braceletes">Braceletes</a></li>
+        <li><a href="#kits">KITS</a></li>
+      </ul>
+      <div class="nav-actions">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <div class="cart-badge">
+          <svg viewBox="0 0 24 24" stroke-width="1.5">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+        </div>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" onclick="closeMobile()">✕</button>
+      <a href="#familia" onclick="closeMobile()">Família</a>
+      <a href="#santos" onclick="closeMobile()">Santos</a>
+      <a href="#profissoes" onclick="closeMobile()">Profissões</a>
+      <a href="#chaveiros" onclick="closeMobile()">Chaveiros</a>
+      <a href="#braceletes" onclick="closeMobile()">Braceletes</a>
+    </div>
+
+    <!-- HERO BANNER -->
+    <div class="hero-banner">
+      <span class="hero-ornament">✦ ✦ ✦</span>
+      <span class="hero-label">Artesanato Devocional</span>
+      <h1 class="hero-title">Nossa Coleção de Fé</h1>
+      <p class="hero-desc">
+        Peças exclusivas criadas com pedras naturais e metais nobres, unindo
+        arte milenar à profunda devoção cristã.
+      </p>
+    </div>
+
+    <!-- ══════════════════════════════════
+     FAMÍLIA
+═══════════════════════════════════ -->
+    <section id="familia">
+      <div class="section-header reveal">
+        <h2>Família <span>· Terços</span></h2>
+        <a href="#" class="ver-todos">Ver todos</a>
+      </div>
+      <div class="product-section">
+        <div class="grid-3 reveal">
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoNossaSenhora.png"
+                alt="Terço de Nossa Senhora"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço de Nossa Senhora</h3>
+              <p class="sub">Contas em ágata rosa e fecho banhado a ouro 18k</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="TercoNossaSenhora.png" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoSagradaFamilia.png"
+                alt="Medalhão Sagrada Família"
+                loading="lazy"
+              />
+              <span class="card-badge">Novo</span>
+            </div>
+            <div class="card-body">
+              <h3>Sagrada Família</h3>
+              <p class="sub">Lindo e de fé</p>
+              <p class="card-price">R$ 156,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoFotoInfantil.png"
+                alt="Cruz de Mesa Colonial"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço Infantil Personalizado</h3>
+              <p class="sub">Pode escolher o estilo e foto</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><span class="divider-icon">✦</span></div>
+
+    <!-- ══════════════════════════════════
+     SANTOS
+═══════════════════════════════════ -->
+    <section id="santos" class="bg-dark-section">
+      <div class="section-header reveal">
+        <h2>Santos <span>· Terços</span></h2>
+        <a href="#" class="ver-todos">Ver todos</a>
+      </div>
+      <div class="product-section">
+        <!-- Featured card -->
+        <div class="card card-featured reveal" style="margin-bottom: 24px">
+          <div class="card-img">
+            <img
+              src="../imagens/NossaSenhoraDaGracas.png"
+              alt="Coleção Especial de Intercessores"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <span
+              class="card-badge"
+              style="
+                position: static;
+                display: inline-block;
+                margin-bottom: 14px;
+              "
+              >Edição Limitada</span
+            >
+            <h3>Santos Intercessores</h3>
+
+            <p
+              class="sub"
+              style="margin-bottom: 20px"
+              src="../imagens/NossaSenhoraDaGracas.png"
+            >
+              Sentimento em cada detalhe e peça
+            </p>
+            <p class="card-price">Sob consulta</p>
+            <a href="" class="btn-acessar">Acessar</a>
+          </div>
+        </div>
+
+        <!-- Grid 3 -->
+        <div class="grid-3 reveal">
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoDivinoEspiritoSanto.png"
+                alt="Ícone São Francisco"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Espírito Santo</h3>
+              <p class="sub">Lindo e de fé</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoSaoJose.png"
+                alt="Terço Santo Antônio"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço São José</h3>
+              <p class="sub">
+                Contas em jaspe vermelho, medalhão fundido em bronze
+              </p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoSagradoCoracaoDeJesus.png"
+                alt="Terço São Judas Tadeu"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço Sagrado Coração de Jesus</h3>
+              <p class="sub">Fé presente</p>
+              <p class="card-price">R$ 70,00</p>
+              <a
+                href="../imagens/TercoSagradoCoracaoDeJesus.png"
+                class="btn-acessar"
+                >Acessar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+     PROFISSÕES (CAROUSEL)
+═══════════════════════════════════ -->
+    <section id="profissoes">
+      <div class="section-header reveal">
+        <h2>Profissões <span>· Terços</span></h2>
+        <a href="#" class="ver-todos">Ver todos</a>
+      </div>
+      <div class="product-section">
+        <div class="carousel-wrap" id="profCarouselWrap">
+          <div class="carousel-track" id="profCarouselTrack">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../imagens/TercoProfissaoMedicina.png"
+                  alt="Terço do Médico"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Terço Profissão Médico</h3>
+                <p class="sub">Medalha de Proteção para profissão</p>
+                <p class="card-price">R$ 70,00</p>
+                <a href="" class="btn-acessar">Acessar</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../imagens/TercoProfissaoOdonto.png"
+                  alt="Terço do Advogado"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Terço Profissão Odonto</h3>
+                <p class="sub">Medalha de Proteção para profissão</p>
+                <p class="card-price">R$ 215,00</p>
+                <a href="" class="btn-acessar">Acessar</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../imagens/TercoProfissaoVeterinario.png"
+                  alt="Terço do Engenheiro"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Terço Profissão Veterinário</h3>
+                <p class="sub">Medalha de Proteção para profissão</p>
+                <p class="card-price">R$ 189,00</p>
+                <a
+                  href="../imagens/TercoProfissaoVeterinario.png"
+                  class="btn-acessar"
+                  >Acessar</a
+                >
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600&q=80"
+                  alt="Terço do Professor"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Terço do Professor</h3>
+                <p class="sub">
+                  Santo Tomás de Aquino em prata com contas de quartzo
+                </p>
+                <p class="card-price">R$ 225,00</p>
+                <a href="#" class="btn-acessar">Acessar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls reveal">
+          <button class="carr-btn" id="profPrev">←</button>
+          <div class="carr-dots" id="profDots"></div>
+          <button class="carr-btn" id="profNext">→</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><span class="divider-icon">✦</span></div>
+
+    <!-- ══════════════════════════════════
+     CHAVEIROS + BRACELETES (2 cols)
+═══════════════════════════════════ -->
+    <section
+      id="chaveiros"
+      style="background: var(--gold-bg2); padding: 0 0 56px"
+    >
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0">
+        <!-- Chaveiros -->
+        <div>
+          <div class="section-header reveal" style="padding-bottom: 16px">
+            <h2>Chaveiros</h2>
+            <a href="#" class="ver-todos">Ver todos</a>
+          </div>
+          <div style="padding: 0 48px 0 48px" class="reveal">
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div class="card-list">
+                <div class="thumb">
+                  <img
+                    src="../imagens/chaveiroNossaSenhoraAparecida.png"
+                    alt="Chaveiro de Fé em Couro"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="info">
+                  <h4>Chaveiro de Fé em Couro</h4>
+                  <span class="price">R$ 40,00</span>
+                </div>
+                <a href="#" class="btn-sm">Acessar</a>
+              </div>
+
+              <div class="card-list">
+                <div class="thumb">
+                  <img
+                    src="../imagens/KitChaveiroDezenaRetrovisor.png""
+                    alt="Chaveiro Cruz de Malta"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="info">
+                  <h4>Kit chaveiro com Dezena de retrovisor</h4>
+                  <span class="price">R$ 40,00</span>
+                </div>
+                <a href="#" class="btn-sm">Acessar</a>
+              </div>
+
+              <div class="card-list">
+                <div class="thumb">
+                  <img
+                    src="../imagens/ChaveirosPai.png"
+                    alt="Chaveiro Nossa Senhora"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="info">
+                  <h4>Chaveiro Pai</h4>
+                  <span class="price">R$ 40,00</span>
+                </div>
+                <a href="#" class="btn-sm">Acessar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Braceletes -->
+        <div id="braceletes">
+          <div class="section-header reveal" style="padding-bottom: 16px">
+            <h2>Braceletes</h2>
+            <a href="#" class="ver-todos">Ver todos</a>
+          </div>
+          <div style="padding: 0 48px 0 48px" class="reveal">
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div class="card-list">
+                <div class="thumb">
+                  <img
+                    src="../imagens/Braceletes.png"
+                    alt="Bracelete Devocional Slim"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="info">
+                  <h4>Bracelete Devocional</h4>
+                  <span class="price">R$ 30,00</span>
+                </div>
+                <a href="#" class="btn-sm">Acessar</a>
+              </div>
+
+              <div class="card-list">
+                <div class="thumb">
+                  <img
+                    src="../imagens/BracelteTudoPosso.png"
+                    alt="Bracelete de Corda e Madeira"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="info">
+                  <h4>Bracele Tudo posso</h4>
+                  <span class="price">R$ 40,00</span>
+                </div>
+                <a href="#" class="btn-sm">Acessar</a>
+              </div>
+
+              <div class="card-list">
+                <div class="thumb">
+                  <img
+                    src="../imagens/BraceleEspiritoSanto.png"
+                    alt="Bracelete Pedras Naturais"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="info">
+                  <h4>Bracelete Espírito Santo</h4>
+                  <span class="price">R$ 68,00</span>
+                </div>
+                <a href="#" class="btn-sm">Acessar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+    <!-- ══════════════════════════════════
+     FAMÍLIA
+═══════════════════════════════════ -->
+    <section id="kits">
+      <div class="section-header reveal">
+        <h2>Presentes Especias <span>· Terços</span></h2>
+        <a href="#" class="ver-todos">Ver todos</a>
+      </div>
+      <div class="product-section">
+        <div class="grid-3 reveal">
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/KitTercoCaixa.png"
+                alt="Terço de Nossa Senhora"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Kit Espiríto Santos</h3>
+              <p class="sub">Lindo e de fé</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoDindaFoto.png"
+                alt="Medalhão Sagrada Família"
+                loading="lazy"
+              />
+              <span class="card-badge">Novo</span>
+            </div>
+            <div class="card-body">
+              <h3>Fotos personalizadas</h3>
+              <p class="sub">Lindo e de fé</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoFamilia.png"
+                alt="Cruz de Mesa Colonial"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço Família Personalizado</h3>
+              <p class="sub">Pode escolher o estilo e foto</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoNoiva.png"
+                alt="Cruz de Mesa Colonial"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço Noiva</h3>
+              <p class="sub">Pode escolher o estilo e foto</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoMae.png"
+                alt="Cruz de Mesa Colonial"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço Mãe</h3>
+              <p class="sub">Pode escolher o estilo e foto</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+
+
+           <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoNossaSenhoraAparecida.png"
+                alt="Cruz de Mesa Colonial"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Terço Aparecida</h3>
+              <p class="sub">Lindo e de fé</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        
+
+
+        
+      </div>
+    </section>
+
+    <div class="divider"><span class="divider-icon">✦</span></div>
+
+    <!-- ══════════════════════════════════
+     NEWSLETTER
+═══════════════════════════════════ -->
+    <div class="newsletter reveal">
+      <span class="newsletter-icon">⛪</span>
+      <h2>Receba Nossas Bênçãos</h2>
+      <h3>Aqui, cada peça é personalizada com carinho e intenção.</h3>
+
+      <p>
+        <br />Desenvolvemos itens de acordo com o seu Santo de devoção, com
+        fotos de família, ou pensados especialmente para presentear alguém
+        importante.
+      </p>
+      <p>
+        Mais do que produtos, entregamos lembranças que carregam fé, proteção e
+        conexão emocional.
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-copy">© 2024 Marisa Cavalhieri Personalizados</span>
+      <div class="footer-links">
+        <a href="#">Política</a>
+        <a href="#">Envio</a>
+        <a href="#">Sobre Nós</a>
+      </div>
+    </footer>
+
+    <script>
+      // ── NAV ACTIVE on scroll ──
+      const sections = document.querySelectorAll("section[id]");
+      const navAs = document.querySelectorAll(".nav-links li a");
+      window.addEventListener(
+        "scroll",
+        () => {
+          let cur = "";
+          sections.forEach((s) => {
+            if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+          });
+          navAs.forEach((a) => {
+            a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
+          });
+        },
+        { passive: true },
+      );
+
+      // ── HAMBURGER ──
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", () =>
+          document.getElementById("mobileMenu").classList.add("open"),
+        );
+      function closeMobile() {
+        document.getElementById("mobileMenu").classList.remove("open");
+      }
+
+      // ── CAROUSEL FACTORY ──
+      function makeCarousel(trackId, dotsId, prevId, nextId, perView) {
+        const track = document.getElementById(trackId);
+        const dotsWrap = document.getElementById(dotsId);
+        const cards = track.querySelectorAll(".card");
+        let cur = 0;
+        let pv = window.innerWidth <= 600 ? 1 : perView;
+        let max = cards.length - pv;
+
+        const getW = () => cards[0].getBoundingClientRect().width + 24;
+
+        function buildDots() {
+          dotsWrap.innerHTML = "";
+          for (let i = 0; i <= Math.max(0, cards.length - pv); i++) {
+            const d = document.createElement("button");
+            d.className = "carr-dot" + (i === cur ? " active" : "");
+            d.addEventListener("click", () => go(i));
+            dotsWrap.appendChild(d);
+          }
+        }
+
+        function go(idx) {
+          cur = Math.max(0, Math.min(idx, max));
+          track.style.transform = `translateX(-${cur * getW()}px)`;
+          dotsWrap
+            .querySelectorAll(".carr-dot")
+            .forEach((d, i) => d.classList.toggle("active", i === cur));
+        }
+
+        document
+          .getElementById(prevId)
+          .addEventListener("click", () => go(cur - 1));
+        document
+          .getElementById(nextId)
+          .addEventListener("click", () => go(cur + 1));
+
+        // touch
+        let sx = 0;
+        track.addEventListener(
+          "touchstart",
+          (e) => (sx = e.touches[0].clientX),
+        );
+        track.addEventListener("touchend", (e) => {
+          const d = sx - e.changedTouches[0].clientX;
+          if (Math.abs(d) > 40) go(d > 0 ? cur + 1 : cur - 1);
+        });
+
+        window.addEventListener("resize", () => {
+          pv = window.innerWidth <= 600 ? 1 : perView;
+          max = cards.length - pv;
+          cur = Math.min(cur, max);
+          buildDots();
+          go(cur);
+        });
+
+        buildDots();
+      }
+
+      makeCarousel("profCarouselTrack", "profDots", "profPrev", "profNext", 2);
+
+      // ── REVEAL ──
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 60);
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+    </script>
+
+<!-- Script e div para aumentar zoom nas imagens braceletes e cheveiros -->
+    <div class="image-modal" id="imageModal">
+      <img id="modalImg" src="" alt="Imagem ampliada">
+    </div>
+
+    <script>
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+
+      document.querySelectorAll(".card-list .thumb img").forEach(img => {
+        img.addEventListener("click", () => {
+          modal.classList.add("active");
+          modalImg.src = img.src;
+        });
+      });
+
+      modal.addEventListener("click", () => {
+        modal.classList.remove("active");
+      });
+      
+    </script>
+    <script>
+      const numeroWhatsApp = "18991540737"; // 🔴 troque aqui
+
+      document.querySelectorAll(".btn-acessar").forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const card = this.closest(".card, .card-list");
+
+          const nomeProduto = card.querySelector("h3, h4")?.innerText || "Produto";
+          const img = card.querySelector("img")?.src || "";
+
+          // mensagem mais completa e profissional
+          const mensagem = 
+              `Olá! Tudo bem? 😊
+
+              Meu nome é: 
+
+              Tenho interesse no produto:
+              👉 ${nomeProduto}
+
+              Gostaria de mais informações e opções de personalização.
+
+              Segue a imagem do produto para referência:
+              📷 ${img}
+
+              Aguardo retorno. Obrigado! 🙏`;
+
+                    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+                    window.open(url, "_blank");
+                  });
+                });
+    </script>
+  </body>
+</html>
