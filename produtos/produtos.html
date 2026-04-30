@@ -233,97 +233,80 @@
       </div>
     </section>
 
+
+  
     <!-- ══════════════════════════════════
-     PROFISSÕES (CAROUSEL)
+     PROFISSÕES 
 ═══════════════════════════════════ -->
-    <section id="profissoes">
+    <section id="profissoes" class="bg-gold-dark">
+
       <div class="section-header reveal">
         <h2>Profissões <span>· Terços</span></h2>
         <a href="#" class="ver-todos">Ver todos</a>
       </div>
-      <div class="product-section">
-        <div class="carousel-wrap" id="profCarouselWrap">
-          <div class="carousel-track" id="profCarouselTrack">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="../imagens/TercoProfissaoMedicina.png"
-                  alt="Terço do Médico"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card-body">
-                <h3>Terço Profissão Médico</h3>
-                <p class="sub">Medalha de Proteção para profissão</p>
-                <p class="card-price">R$ 70,00</p>
-                <a href="" class="btn-acessar">Acessar</a>
-              </div>
+      <div class="product-section" class="bg-gold-dark">
+        <!-- Grid 3 -->
+        <div class="grid-3 reveal">
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoProfissaoOdonto.png"
+                alt="Ícone São Francisco"
+                loading="lazy"
+              />
             </div>
-
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="../imagens/TercoProfissaoOdonto.png"
-                  alt="Terço do Advogado"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card-body">
-                <h3>Terço Profissão Odonto</h3>
-                <p class="sub">Medalha de Proteção para profissão</p>
-                <p class="card-price">R$ 215,00</p>
-                <a href="" class="btn-acessar">Acessar</a>
-              </div>
+            <div class="card-body">
+              <h3>Odontologia</h3>
+              <p class="sub">Proteção no seu serviço</p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="#" class="btn-acessar">Acessar</a>
             </div>
+          </div>
 
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="../imagens/TercoProfissaoVeterinario.png"
-                  alt="Terço do Engenheiro"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card-body">
-                <h3>Terço Profissão Veterinário</h3>
-                <p class="sub">Medalha de Proteção para profissão</p>
-                <p class="card-price">R$ 189,00</p>
-                <a
-                  href="../imagens/TercoProfissaoVeterinario.png"
-                  class="btn-acessar"
-                  >Acessar</a
-                >
-              </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoProfissaoVeterinario.png"
+                alt="Terço Santo Antônio"
+                loading="lazy"
+              />
             </div>
+            <div class="card-body">
+              <h3>Veterinário</h3>
+              <p class="sub">
+                Proteção no seu serviço
+              </p>
+              <p class="card-price">R$ 70,00</p>
+              <a href="" class="btn-acessar">Acessar</a>
+            </div>
+          </div>
 
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600&q=80"
-                  alt="Terço do Professor"
-                  loading="lazy"
-                />
-              </div>
-              <div class="card-body">
-                <h3>Terço do Professor</h3>
-                <p class="sub">
-                  Santo Tomás de Aquino em prata com contas de quartzo
-                </p>
-                <p class="card-price">R$ 225,00</p>
-                <a href="#" class="btn-acessar">Acessar</a>
-              </div>
+          <div class="card">
+            <div class="card-img">
+              <img
+                src="../imagens/TercoProfissaoMedicina.png"
+                alt="Terço São Judas Tadeu"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Medicina</h3>
+              <p class="sub">Proteção no seu serviço</p>
+              <p class="card-price">R$ 70,00</p>
+              <a
+                href=""
+                class="btn-acessar"
+                >Acessar</a
+              >
             </div>
           </div>
         </div>
-        <div class="carousel-controls reveal">
-          <button class="carr-btn" id="profPrev">←</button>
-          <div class="carr-dots" id="profDots"></div>
-          <button class="carr-btn" id="profNext">→</button>
-        </div>
       </div>
-    </section>
 
-    <div class="divider"><span class="divider-icon">✦</span></div>
+
+
+
+    </section>
 
     <!-- ══════════════════════════════════
      CHAVEIROS + BRACELETES (2 cols)
@@ -624,65 +607,7 @@
         document.getElementById("mobileMenu").classList.remove("open");
       }
 
-      // ── CAROUSEL FACTORY ──
-      function makeCarousel(trackId, dotsId, prevId, nextId, perView) {
-        const track = document.getElementById(trackId);
-        const dotsWrap = document.getElementById(dotsId);
-        const cards = track.querySelectorAll(".card");
-        let cur = 0;
-        let pv = window.innerWidth <= 600 ? 1 : perView;
-        let max = cards.length - pv;
 
-        const getW = () => cards[0].getBoundingClientRect().width + 24;
-
-        function buildDots() {
-          dotsWrap.innerHTML = "";
-          for (let i = 0; i <= Math.max(0, cards.length - pv); i++) {
-            const d = document.createElement("button");
-            d.className = "carr-dot" + (i === cur ? " active" : "");
-            d.addEventListener("click", () => go(i));
-            dotsWrap.appendChild(d);
-          }
-        }
-
-        function go(idx) {
-          cur = Math.max(0, Math.min(idx, max));
-          track.style.transform = `translateX(-${cur * getW()}px)`;
-          dotsWrap
-            .querySelectorAll(".carr-dot")
-            .forEach((d, i) => d.classList.toggle("active", i === cur));
-        }
-
-        document
-          .getElementById(prevId)
-          .addEventListener("click", () => go(cur - 1));
-        document
-          .getElementById(nextId)
-          .addEventListener("click", () => go(cur + 1));
-
-        // touch
-        let sx = 0;
-        track.addEventListener(
-          "touchstart",
-          (e) => (sx = e.touches[0].clientX),
-        );
-        track.addEventListener("touchend", (e) => {
-          const d = sx - e.changedTouches[0].clientX;
-          if (Math.abs(d) > 40) go(d > 0 ? cur + 1 : cur - 1);
-        });
-
-        window.addEventListener("resize", () => {
-          pv = window.innerWidth <= 600 ? 1 : perView;
-          max = cards.length - pv;
-          cur = Math.min(cur, max);
-          buildDots();
-          go(cur);
-        });
-
-        buildDots();
-      }
-
-      makeCarousel("profCarouselTrack", "profDots", "profPrev", "profNext", 2);
 
       // ── REVEAL ──
       const obs = new IntersectionObserver(
@@ -721,38 +646,41 @@
       
     </script>
     <script>
-      const numeroWhatsApp = "18991540737"; // 🔴 troque aqui
+    const numeroWhatsApp = "5518991540737";
 
-      document.querySelectorAll(".btn-acessar").forEach(btn => {
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
+    document.querySelectorAll(".btn-acessar").forEach((btn) => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
 
-          const card = this.closest(".card, .card-list");
+        const card = this.closest(".card, .card-list");
 
-          const nomeProduto = card.querySelector("h3, h4")?.innerText || "Produto";
-          const img = card.querySelector("img")?.src || "";
+        const nomeProduto =
+          card.querySelector("h3, h4")?.innerText || "Produto";
 
-          // mensagem mais completa e profissional
-          const mensagem = 
-              `Olá! Tudo bem? 😊
+        // pega a imagem do card clicado
+        const imagem =
+          card.querySelector("img")?.src || "";
 
-              Meu nome é: 
+        // mensagem
+        const mensagem = `Olá! Tudo bem? 😊
 
-              Tenho interesse no produto:
-              👉 ${nomeProduto}
+            Meu nome é:
 
-              Gostaria de mais informações e opções de personalização.
+            Tenho interesse no produto:
+            👉 ${nomeProduto}
 
-              Segue a imagem do produto para referência:
-              📷 ${img}
+            Gostaria de mais informações e opções de personalização.
 
-              Aguardo retorno. Obrigado! 🙏`;
+            📷 Imagem do produto:
+            ${imagem}
 
-                    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            Aguardo retorno. Obrigado! 🙏`;
 
-                    window.open(url, "_blank");
-                  });
+                  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+                  window.open(url, "_blank");
                 });
-    </script>
+              });
+  </script>
   </body>
 </html>

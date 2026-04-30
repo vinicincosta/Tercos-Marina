@@ -544,111 +544,6 @@ nav {
   transform: scale(1);
 }
 
-/* ─────────────────────────────
-   WRAPPER (área visível)
-───────────────────────────── */
-.carousel-wrap {
-  overflow: hidden; /* esconde o excesso lateral */
-  padding: 0 12px; /* dá respiro nas laterais */
-}
-
-/* ─────────────────────────────
-   TRILHO (movimento dos cards)
-───────────────────────────── */
-.carousel-track {
-  display: flex;
-  gap: 16px; /* diminui espaço entre cards */
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ─────────────────────────────
-   CARDS (AGORA MENORES)
-───────────────────────────── */
-.carousel-track .card {
-  min-width: calc(33.33% - 11px);
-  /* agora mostra 3 cards → menores */
-
-  flex-shrink: 0;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* ─────────────────────────────
-   IMAGEM (proporcional)
-───────────────────────────── */
-.card img {
-  width: 100%;
-  aspect-ratio: 4/3; /* mantém proporção bonita */
-  object-fit: cover;
-}
-
-/* ─────────────────────────────
-   CONTEÚDO (mais compacto)
-───────────────────────────── */
-.card-body {
-  padding: 14px;
-}
-
-.card-body h3 {
-  font-size: 1rem;
-}
-
-.card-body p {
-  font-size: 0.8rem;
-}
-
-/* ─────────────────────────────
-   CONTROLES
-───────────────────────────── */
-.carousel-controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-/* BOTÕES */
-.carr-btn {
-  width: 34px;
-  height: 34px;
-  border: 1.5px solid var(--gold-border);
-  background: transparent;
-  cursor: pointer;
-  font-size: 0.9rem;
-  color: var(--text-mid);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: all 0.2s;
-}
-
-.carr-btn:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-/* DOTS */
-.carr-dots {
-  display: flex;
-  gap: 5px;
-}
-
-.carr-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--gold-border);
-  cursor: pointer;
-  border: none;
-}
-
-.carr-dot.active {
-  background: var(--gold);
-  width: 16px;
-  border-radius: 3px;
-}
 /* ── BG SECTIONS ── */
 .bg-dark-section {
   background: var(--dark-mid);
@@ -688,6 +583,47 @@ nav {
 }
 .bg-dark-section .card-list .info span,
 .bg-dark-section .card-list .info .price {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* BG sections */
+.bg-gold-section {
+  color: var(--gold-light);
+}
+.bg-gold-section .section-header h2 {
+  color: var(--cream);
+}
+.bg-gold-section .section-header h2 span {
+  color: var(--gold-light);
+}
+.bg-gold-section .ver-todos {
+  color: rgba(255, 255, 255, 0.35);
+}
+.bg-gold-section .ver-todos:hover {
+  color: var(--gold);
+}
+.bg-gold-section .card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(201, 168, 76, 0.15);
+}
+.bg-gold-section .card-body h3 {
+  color: var(--cream);
+}
+.bg-gold-section .card-body .sub {
+  color: rgba(255, 255, 255, 0.4);
+}
+.bg-gold-section .card-price {
+  color: var(--gold-light);
+}
+.bg-gold-section .card-list {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(201, 168, 76, 0.15);
+}
+.bg-gold-section .card-list .info h4 {
+  color: var(--cream);
+}
+.bg-gold-section .card-list .info span,
+.bg-gold-section .card-list .info .price {
   color: rgba(255, 255, 255, 0.45);
 }
 
