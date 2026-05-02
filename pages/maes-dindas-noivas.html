@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mães, Dindas e Noivas · Marisa Cavalhieri Personalizados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="../shared/shared.css" rel="stylesheet"/>
+  <style>
+    /* ── Identidade visual: rosé, nude e branco ── */
+    :root {
+      --page-bg:       #fdf5f5;
+      --page-bg2:      #f8ece9;
+      --hero-bg:       #3d1a1a;
+      --hero-glow:     rgba(210,120,100,.16);
+      --accent:        #d4876e;
+      --accent-dark:   #a0503a;
+      --accent-border: rgba(212,135,110,.24);
+      --card-bg:       #fffaf8;
+      --card-border:   rgba(212,135,110,.2);
+      --section-title: #3d1a1a;
+      --hero-title-color: #fdf5f5;
+      --hero-desc-color:  rgba(253,240,236,.52);
+    }
+    .hero-banner { background: linear-gradient(135deg, #3d1a1a 0%, #5c2828 100%); }
+    .hero-banner::after { background: linear-gradient(90deg, transparent, #d4876e, transparent); }
+    .hero-ornament, .hero-label { color: #e8b4a0; }
+    .btn-acessar   { border-color: var(--accent); color: var(--accent-dark); }
+    .btn-acessar:hover { background: var(--accent); color: #fff; }
+    .card:hover    { box-shadow: 0 16px 48px rgba(212,135,110,.2); }
+    .divider::before, .divider::after { background: var(--accent-border); }
+    .divider-icon  { color: var(--accent); }
+    .ver-todos:hover { color: var(--accent); }
+    .card-price    { color: var(--accent-dark); }
+    footer         { background: #3d1a1a; }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="../index/index.html" class="nav-logo">Marisa Cavalhieri</a>
+  <ul class="nav-links">
+    <li><a href="../index/index.html">Home</a></li>
+    <li><a href="../produtos/produtos.html">Coleção</a></li>
+    <li><a href="santos.html">Santos</a></li>
+    <li><a href="nossa-senhoras.html">N. Senhoras</a></li>
+    <li><a href="maes-dindas-noivas.html" class="active">Mães & Noivas</a></li>
+    <li><a href="criancas-profissoes.html">Crianças</a></li>
+    <li><a href="braceletes-chaveiros.html">Braceletes</a></li>
+  </ul>
+  <div class="nav-actions">
+    <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="../index/index.html"           onclick="closeMobile()">Home</a>
+  <a href="santos.html"                   onclick="closeMobile()">Santos</a>
+  <a href="nossa-senhoras.html"           onclick="closeMobile()">Nossa Senhoras</a>
+  <a href="maes-dindas-noivas.html"       onclick="closeMobile()">Mães, Dindas e Noivas</a>
+  <a href="criancas-profissoes.html"      onclick="closeMobile()">Crianças e Profissões</a>
+  <a href="braceletes-chaveiros.html"     onclick="closeMobile()">Braceletes e Chaveiros</a>
+</div>
+
+<div class="hero-banner">
+  <span class="hero-ornament">✦ ✦ ✦</span>
+  <span class="hero-label">Presentes com Alma</span>
+  <h1 class="hero-title">Mães, Dindas e Noivas</h1>
+  <p class="hero-desc">Terços e peças únicas para celebrar os laços mais especiais — presentes que ficam para sempre na memória e no coração.</p>
+</div>
+
+<div id="catalog-root"></div>
+
+<div class="newsletter reveal">
+  <span class="newsletter-icon">🌸</span>
+  <h2>Um Presente Inesquecível</h2>
+  <h3>Personalizado com amor para quem você ama.</h3>
+  <p>Cada peça pode ser personalizada com nome, foto e a devoção da homenageada.</p>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2024 Marisa Cavalhieri Personalizados</span>
+  <div class="footer-links">
+    <a href="#">Política</a><a href="#">Envio</a><a href="#">Sobre</a>
+  </div>
+</footer>
+
+<div class="img-modal" id="imgModal">
+  <button class="modal-close" id="modalClose">✕</button>
+  <button class="modal-prev"  id="modalPrev">‹</button>
+  <div class="img-modal-inner">
+    <img class="modal-img" src="" alt="" style="transition:opacity .2s,transform .35s cubic-bezier(.4,0,.2,1)"/>
+  </div>
+  <button class="modal-next" id="modalNext">›</button>
+  <div class="modal-counter"></div>
+</div>
+
+<script src="../shared/shared.js"></script>
+<script>
+const IMAGES_ROOT = "../imagens";
+
+const catalog = {
+  sections: [
+    {
+      id: "maes", cols: 3,
+      title: "Para as Mães",
+      subtitle: "· Terços",
+      groups: [{
+        label: "Terço Mãe", folder: "ImagensMae", price: "R$ 70,00",
+        badge: "Presente",
+        sub: "O amor de uma mãe, eterno como a fé",
+        images: ["TercoMae1.png","TercoMae2.png"]
+      }]
+    },
+    {
+      id: "dindas", cols: 4,
+      title: "Para as Dindas",
+      subtitle: "· Terços",
+      groups: [{
+        label: "Terço Dinda", folder: "TercoDinda", price: "R$ 70,00",
+        badge: "Presente",
+        sub: "Para a dinda mais especial da vida",
+        images: ["TercoDinda1.png","TercoDinda2.png","TercoDinda3.png","TercoDinda4.png","TercoDinda6.png"]
+      }]
+    },
+    {
+      id: "noivas", cols: 3,
+      title: "Para as Noivas",
+      subtitle: "· Terços",
+      groups: [{
+        label: "Terço Noiva", folder: "ImagensNoiva", price: "R$ 70,00",
+        badge: "Exclusivo",
+        sub: "Elegância e bênção para o dia mais especial",
+        images: ["TercoNoiva1.png","TercoNoiva2.png","TercoNoiva3.png","TercoNoiva4.png","TercoNoiva5.png"]
+      }]
+    },
+    {
+      id: "familia", cols: 4,
+      title: "Família",
+      subtitle: "· Terços",
+      groups: [{
+        label: "Terço Família", folder: "imagensFamilia", price: "R$ 70,00",
+        sub: "A família unida pela fé e pelo amor",
+        images: ["TercoFamilia1.png","TercoFamilia2.png","TercoFamilia3.png","TercoFamilia4.png"]
+      }]
+    },
+    {
+      id: "fotos", cols: 4,
+      title: "Com Fotos Personalizadas",
+      subtitle: "· Terços",
+      groups: [{
+        label: "Terço com Foto", folder: "ImagensFoto", price: "R$ 70,00",
+        badge: "Personalize",
+        sub: "Adicione uma foto especial e torne único",
+        images: ["TercoFoto1.png","TercoFoto2.png","TercoFoto3.png","TercoFoto4.png","TercoFoto5.png"]
+      }]
+    },
+  ]
+};
+
+initPage(catalog, IMAGES_ROOT);
+</script>
+</body>
+</html>

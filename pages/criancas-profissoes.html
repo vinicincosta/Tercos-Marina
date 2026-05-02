@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crianças e Profissões · Marisa Cavalhieri Personalizados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="../shared/shared.css" rel="stylesheet"/>
+  <style>
+    /* ── Identidade visual: rosa claro, branco e pastel ── */
+    :root {
+      --page-bg:       #fff5f8;
+      --page-bg2:      #fce8ef;
+      --hero-bg:       #3a1022;
+      --hero-glow:     rgba(224,130,160,.16);
+      --accent:        #d97fa0;
+      --accent-dark:   #a04468;
+      --accent-border: rgba(217,127,160,.24);
+      --card-bg:       #fffcfd;
+      --card-border:   rgba(217,127,160,.2);
+      --section-title: #3a1022;
+      --hero-title-color: #fff5f8;
+      --hero-desc-color:  rgba(252,232,239,.52);
+    }
+    .hero-banner { background: linear-gradient(135deg, #3a1022 0%, #5c1e38 100%); }
+    .hero-banner::after { background: linear-gradient(90deg, transparent, #d97fa0, transparent); }
+    .hero-ornament, .hero-label { color: #f0b3c8; }
+    .btn-acessar   { border-color: var(--accent); color: var(--accent-dark); }
+    .btn-acessar:hover { background: var(--accent); color: #fff; }
+    .card:hover    { box-shadow: 0 16px 48px rgba(217,127,160,.2); }
+    .divider::before, .divider::after { background: var(--accent-border); }
+    .divider-icon  { color: var(--accent); }
+    .ver-todos:hover { color: var(--accent); }
+    .card-price    { color: var(--accent-dark); }
+    footer         { background: #3a1022; }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="../index/index.html" class="nav-logo">Marisa Cavalhieri</a>
+  <ul class="nav-links">
+    <li><a href="../index/index.html">Home</a></li>
+
+    <li><a href="santos.html">Santos</a></li>
+    <li><a href="nossa-senhoras.html">N. Senhoras</a></li>
+    <li><a href="maes-dindas-noivas.html">Mães & Noivas</a></li>
+    <li><a href="criancas-profissoes.html" class="active">Crianças</a></li>
+    <li><a href="braceletes-chaveiros.html">Braceletes</a></li>
+  </ul>
+  <div class="nav-actions">
+    <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="../index/index.html"           onclick="closeMobile()">Home</a>
+  <a href="../produtos/produtos.html"     onclick="closeMobile()">Coleção</a>
+  <a href="santos.html"                   onclick="closeMobile()">Santos</a>
+  <a href="nossa-senhoras.html"           onclick="closeMobile()">Nossa Senhoras</a>
+  <a href="maes-dindas-noivas.html"       onclick="closeMobile()">Mães, Dindas e Noivas</a>
+  <a href="criancas-profissoes.html"      onclick="closeMobile()">Crianças e Profissões</a>
+  <a href="braceletes-chaveiros.html"     onclick="closeMobile()">Braceletes e Chaveiros</a>
+</div>
+
+<div class="hero-banner">
+  <span class="hero-ornament">✦ ✦ ✦</span>
+  <span class="hero-label">Fé desde a Infância</span>
+  <h1 class="hero-title">Crianças e Profissões</h1>
+  <p class="hero-desc">Terços infantis, anjos da guarda e peças especiais para cada profissão — fé e proteção para todas as fases da vida.</p>
+</div>
+
+<div id="catalog-root"></div>
+
+<div class="newsletter reveal">
+  <span class="newsletter-icon">👼</span>
+  <h2>Fé Plantada Desde Cedo</h2>
+  <h3>Peças que acompanham toda uma vida de devoção.</h3>
+  <p>Do batismo à profissão escolhida, temos a peça certa para cada momento especial.</p>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2024 Marisa Cavalhieri Personalizados</span>
+  <div class="footer-links">
+    <a href="#">Política</a><a href="#">Envio</a><a href="#">Sobre</a>
+  </div>
+</footer>
+
+<div class="img-modal" id="imgModal">
+  <button class="modal-close" id="modalClose">✕</button>
+  <button class="modal-prev"  id="modalPrev">‹</button>
+  <div class="img-modal-inner">
+    <img class="modal-img" src="" alt="" style="transition:opacity .2s,transform .35s cubic-bezier(.4,0,.2,1)"/>
+  </div>
+  <button class="modal-next" id="modalNext">›</button>
+  <div class="modal-counter"></div>
+</div>
+
+<script src="../shared/shared.js"></script>
+<script>
+const IMAGES_ROOT = "../imagens";
+
+const catalog = {
+  sections: [
+    {
+      id: "infantil", cols: 3,
+      title: "Terços Infantis",
+      subtitle: "· Crianças",
+      groups: [{
+        label: "Terço Infantil", folder: "imagensInfantil", price: "R$ 70,00",
+        badge: "Infantil",
+        sub: "Fé colorida e suave para as crianças",
+        images: ["Infantil1.png","Infantil2.png","Infantil3.png","Infantil4.png","Infantil5.png","TercoInfantil6.png"]
+      }]
+    },
+    {
+      id: "anjo-da-guarda", cols: 4,
+      title: "Anjo da Guarda",
+      subtitle: "· Terços",
+      groups: [{
+        label: "Terço Anjo da Guarda", folder: "ImagensAnjoDaGuarda", price: "R$ 70,00",
+        badge: "Proteção",
+        sub: "O anjo guardião sempre ao lado das crianças",
+        images: ["TercoAnjoDaGuarda1.png","TercoAnjoDaGuarda2.png","TercoAnjoDaGuarda3.png","TercoAnjoDaGuarda4.png"]
+      }]
+    },
+    {
+      id: "profissoes", cols: 3,
+      title: "Terços de Profissões",
+      subtitle: "· Vocação",
+      groups: [{
+        label: "Terço de Profissão", folder: "imagensProfissoes", price: "R$ 70,00",
+        sub: "Fé e proteção no exercício de cada vocação",
+        images: [
+          "TercoProfissao1.png","TercoProfissao2.png","TercoProfissao3.png",
+          "TercoProfissao4.png","TercoProfissao5.png","TercoProfissao6.png",
+          "TercoProfissao7.png","TercoProfissao8.png","TercoProfissao9.png"
+        ]
+      }]
+    },
+    {
+      id: "masculino", cols: 3,
+      title: "Terços Masculinos",
+      subtitle: "· Homens de Fé",
+      groups: [{
+        label: "Terço Masculino", folder: "imagensMasculino", price: "R$ 70,00",
+        sub: "Elegância sóbria para os homens de fé",
+        images: ["TercoMasculino1.png","TercoMasculino2.png","TercoMasculino3.png"]
+      }]
+    },
+  ]
+};
+
+initPage(catalog, IMAGES_ROOT);
+</script>
+</body>
+</html>

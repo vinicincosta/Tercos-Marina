@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossa Senhoras · Marisa Cavalhieri Personalizados</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../shared/shared.css" rel="stylesheet" />
+    <style>
+      /* ── Identidade visual: azul claro, branco e detalhes suaves ── */
+      :root {
+        --page-bg: #f0f5fc;
+        --page-bg2: #e4edf8;
+        --hero-bg: #0d1f3c;
+        --hero-glow: rgba(100, 149, 210, 0.18);
+        --accent: #6495d2;
+        --accent-dark: #2d5fa0;
+        --accent-border: rgba(100, 149, 210, 0.25);
+        --card-bg: #f8fbff;
+        --card-border: rgba(100, 149, 210, 0.2);
+        --section-title: #0d1f3c;
+        --hero-title-color: #f0f5fc;
+        --hero-desc-color: rgba(220, 232, 248, 0.55);
+      }
+      .hero-banner {
+        background: linear-gradient(135deg, #0d1f3c 0%, #1a3560 100%);
+      }
+      .hero-banner::after {
+        background: linear-gradient(90deg, transparent, #6495d2, transparent);
+      }
+      .hero-ornament {
+        color: #a8c4e8;
+      }
+      .hero-label {
+        color: #a8c4e8;
+      }
+      .btn-acessar {
+        border-color: var(--accent);
+        color: var(--accent-dark);
+      }
+      .btn-acessar:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+      .card:hover {
+        box-shadow: 0 16px 48px rgba(100, 149, 210, 0.18);
+      }
+      .divider::before,
+      .divider::after {
+        background: var(--accent-border);
+      }
+      .divider-icon {
+        color: var(--accent);
+      }
+      .ver-todos:hover {
+        color: var(--accent);
+      }
+      .card-price {
+        color: var(--accent-dark);
+      }
+      footer {
+        background: #0d1f3c;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="mainNav">
+      <a href="../index/index.html" class="nav-logo">Marisa Cavalhieri</a>
+      <ul class="nav-links">
+        <li><a href="../index/index.html">Home</a></li>
+
+        <li><a href="santos.html">Santos</a></li>
+        <li><a href="nossa-senhoras.html" class="active">N. Senhoras</a></li>
+        <li><a href="maes-dindas-noivas.html">Mães & Noivas</a></li>
+        <li><a href="criancas-profissoes.html">Crianças</a></li>
+        <li><a href="braceletes-chaveiros.html">Braceletes</a></li>
+      </ul>
+      <div class="nav-actions">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="../index/index.html" onclick="closeMobile()">Home</a>
+      <a href="../produtos/produtos.html" onclick="closeMobile()">Coleção</a>
+      <a href="santos.html" onclick="closeMobile()">Santos</a>
+      <a href="nossa-senhoras.html" onclick="closeMobile()">Nossa Senhoras</a>
+      <a href="maes-dindas-noivas.html" onclick="closeMobile()"
+        >Mães, Dindas e Noivas</a
+      >
+      <a href="criancas-profissoes.html" onclick="closeMobile()"
+        >Crianças e Profissões</a
+      >
+      <a href="braceletes-chaveiros.html" onclick="closeMobile()"
+        >Braceletes e Chaveiros</a
+      >
+    </div>
+
+    <div class="hero-banner">
+      <span class="hero-ornament">✦ ✦ ✦</span>
+      <span class="hero-label">Artesanato Devocional</span>
+      <h1 class="hero-title">Nossa Senhoras</h1>
+      <p class="hero-desc">
+        Terços e peças devocionais dedicados às diversas invocações de Nossa
+        Senhora — beleza, fé e proteção materna em cada detalhe.
+      </p>
+    </div>
+
+    <div id="catalog-root"></div>
+
+    <div class="newsletter reveal">
+      <span class="newsletter-icon">💙</span>
+      <h2>Sob o Manto de Maria</h2>
+      <h3>Cada peça é um ato de amor e devoção à Mãe de Deus.</h3>
+      <p>
+        Escolha a invocação de Nossa Senhora de sua devoção e encomende sua peça
+        personalizada.
+      </p>
+    </div>
+
+    <footer>
+      <span class="footer-copy">© 2024 Marisa Cavalhieri Personalizados</span>
+      <div class="footer-links">
+        <a href="#">Política</a><a href="#">Envio</a><a href="#">Sobre</a>
+      </div>
+    </footer>
+
+    <div class="img-modal" id="imgModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <button class="modal-prev" id="modalPrev">‹</button>
+      <div class="img-modal-inner">
+        <img
+          class="modal-img"
+          src=""
+          alt=""
+          style="
+            transition:
+              opacity 0.2s,
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          "
+        />
+      </div>
+      <button class="modal-next" id="modalNext">›</button>
+      <div class="modal-counter"></div>
+    </div>
+
+    <script src="../shared/shared.js"></script>
+    <script>
+      const IMAGES_ROOT = "../imagens";
+
+      const catalog = {
+        sections: [
+          {
+            id: "ns-aparecida",
+            cols: 4,
+            title: "Nossa Senhora Aparecida",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Nossa Senhora Aparecida",
+                folder: "ImagensNossaSenhoraAparecida",
+                price: "R$ 70,00",
+                sub: "A Padroeira do Brasil em peça artesanal",
+                images: [
+                  "TercoNossaSenhoraAparecida.png",
+                  "TercoNossaSenhoraAparecida1.png",
+                  "TercoNossaSenhoraAparecida2.png",
+                  "TercoNossaSenhoraAparecida3.png",
+                  "TercoNossaSenhoraAparecida4.png",
+                  "TercoNossaSenhoraAparecida5.png",
+                  "TercoNossaSenhoraAparecida6.png",
+                  "TercoNossaSenhoraAparecida7.png",
+                  "TercoNossaSenhoraAparecida8.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "ns-gracas",
+            cols: 3,
+            title: "Nossa Senhora das Graças",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Nossa Senhora das Graças",
+                folder: "TercoNossaSenhoraDasGracas",
+                price: "R$ 70,00",
+                sub: "Graças e bênçãos em cada conta artesanal",
+                images: [
+                  "TercoNossaSenhoraDaGracas1.png",
+                  "TercoNossaSenhoraDaGracas2.png",
+                  "TercoNossaSenhoraDaGracas3.png",
+                  "TercoNossaSenhoraDaGracas4.png",
+                  "TercoNossaSenhoraDaGracas5.png",
+                  "TercoNossaSenhoraDaGracas6.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "ns-fatima",
+            cols: 3,
+            title: "Nossa Senhora de Fátima",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Nossa Senhora de Fátima",
+                folder: "ImagensNossaSenhoraDeFatimia",
+                price: "R$ 70,00",
+                sub: "A mensagem de paz e conversão de Fátima",
+                images: ["TercoNossaSenhoraDeFatima1.png"],
+              },
+            ],
+          },
+        ],
+      };
+
+      initPage(catalog, IMAGES_ROOT);
+    </script>
+  </body>
+</html>

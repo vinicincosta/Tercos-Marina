@@ -360,152 +360,6 @@ section {
    SEÇÃO DO CARROSSEL
    Define o fundo e espaçamento geral
 ───────────────────────────── */
-.carousel-section {
-  background: var(--dark); /* cor de fundo escura */
-  padding: 64px 0; /* diminui o espaço vertical (antes 96px) */
-}
-
-/* Título da seção */
-.carousel-section .section-title {
-  color: var(--white);
-}
-
-/* Subtítulo / label */
-.carousel-section .label {
-  color: var(--gold);
-}
-
-/* ─────────────────────────────
-   WRAPPER DO CARROSSEL
-   Responsável por esconder overflow e posicionamento
-───────────────────────────── */
-.carousel-wrap {
-  position: relative;
-  margin-top: 32px; /* reduz espaço */
-  overflow: hidden; /* esconde o que sair da tela */
-}
-
-/* ─────────────────────────────
-   TRILHO (onde os cards ficam lado a lado)
-───────────────────────────── */
-.carousel-track {
-  display: flex; /* deixa os cards em linha */
-  gap: 16px; /* menor espaço entre cards (antes 24px) */
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* animação suave */
-}
-
-/* ─────────────────────────────
-   CARD INDIVIDUAL
-───────────────────────────── */
-.carousel-card {
-  min-width: calc(
-    25% - 12px
-  ); /* menor largura (antes 30%) → cabem mais na tela */
-  background: var(--dark-mid);
-  overflow: hidden;
-  flex-shrink: 0; /* impede o card de encolher */
-  position: relative;
-  border-radius: 8px; /* leve arredondamento */
-}
-
-/* IMAGEM DO CARD */
-.carousel-card img {
-  width: 100%; /* ocupa toda largura do card (ANTES era 40%, isso quebrava o layout) */
-  height: 160px; /* altura fixa menor → deixa mais compacto */
-  object-fit: cover; /* corta sem distorcer */
-  display: block;
-  transition: transform 0.4s;
-}
-
-/* Efeito ao passar o mouse */
-.carousel-card:hover img {
-  transform: scale(1.05);
-}
-
-/* ─────────────────────────────
-   CONTEÚDO DO CARD
-───────────────────────────── */
-.carousel-card-body {
-  padding: 18px 20px 24px; /* menor espaçamento interno */
-}
-
-/* Título do card */
-.carousel-card-body h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem; /* menor */
-  color: var(--white);
-  margin-bottom: 8px;
-}
-
-/* Texto do card */
-.carousel-card-body p {
-  font-size: 0.8rem; /* menor texto */
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-}
-
-/* Link dentro do card */
-.carousel-card-body .link-gold {
-  margin-top: 14px;
-  display: inline-flex;
-}
-
-/* ─────────────────────────────
-   CONTROLES (botões e dots)
-───────────────────────────── */
-.carousel-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 28px; /* menor espaço */
-}
-
-/* BOTÕES (setas) */
-.carousel-btn {
-  width: 38px; /* menor botão */
-  height: 38px;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-  color: var(--white);
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-  border-radius: 50%;
-}
-
-/* Hover do botão */
-.carousel-btn:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-/* DOTS (indicadores) */
-.carousel-dots {
-  display: flex;
-  gap: 6px;
-}
-
-/* Cada bolinha */
-.carousel-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all 0.2s;
-  border: none;
-}
-
-/* Dot ativo */
-.carousel-dot.active {
-  background: var(--gold);
-  width: 18px;
-  border-radius: 3px;
-}
 
 /* ── ABOUT SPLIT ── */
 .about-section {
@@ -816,4 +670,65 @@ footer {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── ZOOM NAS IMAGENS ── */
+.feature-img img,
+.about-img img,
+.carousel-card img {
+  cursor: zoom-in;
+}
+
+/* Fundo escuro do modal */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 24px;
+}
+
+/* Modal ativo */
+.image-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Imagem ampliada */
+.image-modal img {
+  max-width: 95%;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 12px;
+  animation: zoomImage 0.3s ease;
+}
+
+/* Botão fechar */
+.image-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Animação */
+@keyframes zoomImage {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
