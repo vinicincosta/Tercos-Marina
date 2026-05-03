@@ -1,326 +1,480 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sacred Heritage – Tradição e Devoção</title>
-    <link
-      href="index.css"
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
-    />
-  </head>
-  <body>
-    <!-- NAV -->
-    <nav id="mainNav">
-      <a href="#" class="nav-logo">Marisa Cavalhieri Personalizados</a>
-      <ul class="nav-links">
-        <li>
-          <a href="../pages/braceletes-chaveiros.html">Braceles e Chaveiros</a>
-        </li>
-        <li>
-          <a href="../pages/criancas-profissoes.html">Crianças e Profissões</a>
-        </li>
-        <li><a href="../pages/santos.html">Santos e Espírito Santo</a></li>
-        <li>
-          <a href="../pages/maes-dindas-noivas.html">Mães, Dindas e noivas</a>
-        </li>
-        <li><a href="../pages/nossa-senhoras.html">Nossas Senhoras</a></li>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marisa Cavalhieri Personalizados – Tradição e Devoção</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
 
-        <li><a href="#historia">Nossa História</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+<!-- ══ NAVEGAÇÃO ══ -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">Marisa Cavalhieri</a>
+  <ul class="nav-links">
+    <li><a href="pages/santos.html">Santos</a></li>
+    <li><a href="pages/nossa-senhoras.html">N. Senhoras</a></li>
+    <li><a href="pages/maes-dindas-noivas.html">Mães &amp; Noivas</a></li>
+    <li><a href="pages/criancas-profissoes.html">Crianças</a></li>
+    <li><a href="pages/braceletes-chaveiros.html">Braceletes</a></li>
+    <li><a href="#historia">Nossa História</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="nav-icons">
+    <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </nav>
+<!-- ══ MENU MOBILE ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Fechar">✕</button>
+  <a href="pages/santos.html"              onclick="closeMobile()">Santos e Espírito Santo</a>
+  <a href="pages/nossa-senhoras.html"      onclick="closeMobile()">Nossa Senhoras</a>
+  <a href="pages/maes-dindas-noivas.html"  onclick="closeMobile()">Mães, Dindas e Noivas</a>
+  <a href="pages/criancas-profissoes.html" onclick="closeMobile()">Crianças e Profissões</a>
+  <a href="pages/braceletes-chaveiros.html"onclick="closeMobile()">Braceletes e Chaveiros</a>
+  <a href="#historia"                      onclick="closeMobile()">Nossa História</a>
+  <a href="#contato"                       onclick="closeMobile()">Contato</a>
+</div>
 
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-      <button class="mobile-close" id="mobileClose">✕</button>
-      <a href="#tercos" onclick="closeMobile()">Terços</a>
-      <a href="#braceletes" onclick="closeMobile()">Braceletes</a>
-      <a href="#chaveiros" onclick="closeMobile()">Chaveiros</a>
-      <a href="#historia" onclick="closeMobile()">Nossa História</a>
-      <a href="#contato" onclick="closeMobile()">Contato</a>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Tradição e Devoção<br>em Cada <em>Detalhe</em></h1>
+    <p>Artesanato sacro que transcende gerações, unindo materiais nobres e criação em peças únicas de herança.</p>
+    <div class="hero-btns">
+      <a href="pages/santos.html" class="btn btn-gold">Explorar Coleção</a>
+      <a href="#historia" class="btn btn-outline">Nossa História</a>
     </div>
+  </div>
+</section>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>Tradição e Devoção<br />em Cada <em>Detalhe</em></h1>
-        <p>
-          Artesanato sacro que transcende gerações, unindo materiais nobres e
-          criação em peças únicas de herança.
-        </p>
-        <div class="hero-btns">
-          <a href="../pages/santos.html" class="btn btn-gold"
-            >Explorar Coleção</a
-          >
-          <a href="#historia" class="btn btn-outline">Nosso Processo</a>
-        </div>
+<!-- ══ SAGRADA FAMÍLIA ══ -->
+<section class="bg-light" id="tercos">
+  <div class="container">
+    <div class="feature-inner reveal">
+      <div class="feature-body">
+        <span class="label">Exclusividade</span>
+        <h2 class="section-title">Terços da Sagrada Família</h2>
+        <p class="section-text">Nossa coleção dedicada à Sagrada Família combina o pilar da fé cristã. Peças montadas com materiais nobres, capturando a essência da harmonia e proteção divina.</p>
+        <ul class="feature-checks">
+          <li>Materiais selecionados de alta qualidade</li>
+          <li>Acabamento artesanal exclusivo do ateliê</li>
+        </ul>
+        <a href="pages/nossa-senhoras.html" class="link-gold">Ver toda a coleção</a>
       </div>
-    </section>
-
-    <!-- TERÇOS DA SAGRADA FAMÍLIA -->
-    <section class="bg-light" id="tercos">
-      <div class="container">
-        <div class="feature-inner reveal">
-          <div class="feature-body">
-            <span class="label">Exclusividade</span>
-            <h2 class="section-title">Terços da Sagrada Família</h2>
-            <p class="section-text">
-              Nossa coleção dedicada à Sagrada Família combina o pilar da fé
-              cristã. Peças montadas com cristais böemios e metais banhados a
-              ouro, capturando a essência da harmonia e proteção divina.
-            </p>
-            <ul class="feature-checks">
-              <li>Cristais selecionados de alta qualidade</li>
-              <li>Metal banhado a ouro exclusivo do ateliê</li>
-            </ul>
-            <a href="#" class="link-gold">Ver todos os terços</a>
-          </div>
-          <div class="feature-img">
-            <img
-              src="../imagens/ImagensFoto/TercoFoto1.png"
-              alt="Terços da Sagrada Família"
-              loading="lazy"
-            />
-          </div>
-        </div>
+      <div class="feature-img">
+        <img src="imagens/ImagensFoto/TercoFoto1.png" alt="Terços da Sagrada Família" loading="lazy"/>
       </div>
-    </section>
-
-    <!-- TERÇOS DE SANTOS -->
-    <section class="bg-warm" id="braceletes">
-      <div class="container">
-        <div class="feature-inner reverse reveal">
-          <div class="feature-img">
-            <img
-              src="../imagens/ImagensSaoJose/TercoSaoJose1.png"
-              alt="Terços de Santos"
-              loading="lazy"
-            />
-          </div>
-          <div class="feature-body">
-            <span class="label">Devoção</span>
-            <h2 class="section-title">Terços de Santos</h2>
-            <p class="section-text">
-              Uma coleção especial inspirada na vida e milagres dos grandes
-              santos da Igreja. Cada peça é uma ponte entre o fiel e a
-              intercessão divina.
-            </p>
-            <ul class="feature-checks">
-              <li>O terço é a arma primordial dos Cristões</li>
-              <li>São fielmente representados</li>
-            </ul>
-            <a
-              href="#"
-              class="btn btn-gold"
-              style="margin-top: 24px; display: inline-block"
-              >Solicitar Personalizado</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CAROUSEL: FÉ EM MOVIMENTO -->
-
-    <!-- SOBRE / NOSSA HISTÓRIA -->
-    <section class="about-section" id="historia">
-      <div class="container">
-        <div class="about-inner reveal">
-          <div class="about-img">
-            <img src="../imagens/logo.png" alt="Nosso ateliê" loading="lazy" />
-            <div class="about-stats">
-              <div class="about-stat">
-                <strong>100%</strong>
-                <span>Artesanal</span>
-              </div>
-              <div class="about-stat">
-                <strong>10+</strong>
-                <span>Anos de Tradição</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-body">
-            <span class="label">Nossa História</span>
-            <h2 class="section-title">Onde a Oração se Torna Arte</h2>
-            <p class="section-text" style="margin-bottom: 16px">
-              À frente desse propósito está Maria Cavalheri, de Valparaíso, que
-              transformou sua devoção em missão: levar significado, beleza e
-              espiritualidade a cada pessoa que passa por aqui. Mais do que uma
-              loja, este é um lugar de encontro com a fé.
-            </p>
-            <p class="section-text">
-              Sinta-se acolhido para conhecer nossa história e descobrir
-              produtos que inspiram, protegem e acompanham você em sua caminhada
-              espiritual.
-            </p>
-            <a
-              href="#"
-              class="btn btn-gold"
-              style="margin-top: 32px; display: inline-block"
-              >Conhecer o Ateliê</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter" id="contato">
-      <div class="container">
-        <span class="label reveal">Marisa Cavalhieri Personalizados</span>
-        <h2 class="section-title reveal">Acompanhe nossas novas criações</h2>
-        <p class="reveal">
-          Seja o primeiro a conhecer nossas peças exclusivas e coleções
-          limitadas.
-        </p>
-        <div class="newsletter-form reveal">
-          <input type="email" placeholder="Seu e-mail" />
-          <button type="button">Inscrever</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="#" class="nav-logo">Marisa Cavalhieri Personalizados</a>
-            <p>
-              Artesanato sacro que transcende gerações, unindo materiais nobres
-              e criação em peças únicas.
-            </p>
-            <div class="footer-socials">
-              <a href="#">f</a>
-              <a href="#">in</a>
-              <a href="#">ig</a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Produtos</h4>
-            <ul>
-              <li><a href="#">Terços da Sagrada Família</a></li>
-              <li><a href="#">Terços de Santos</a></li>
-              <li><a href="#">Braceletes</a></li>
-              <li><a href="#">Chaveiros de Fé</a></li>
-              <li><a href="#">Medalhas</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Institucional</h4>
-            <ul>
-              <li><a href="#">Nossa História</a></li>
-              <li><a href="#">Nosso Processo</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Suporte</h4>
-            <ul>
-              <li><a href="#">Política de Envio</a></li>
-              <li><a href="#">Trocas e Devoluções</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span
-            >© 2024 Marisa Cavalhieri Personalizados. Todos os direitos
-            reservados.</span
-          >
-          <span>Desenvolvido com fé e cuidado.</span>
-        </div>
-      </div>
-    </footer>
-
-    <!-- MODAL DE ZOOM -->
-    <div class="image-modal" id="imageModal">
-      <button class="image-modal-close" id="closeImageModal">✕</button>
-
-      <img id="modalImage" src="" alt="Imagem ampliada" />
     </div>
+  </div>
+</section>
 
-    <script>
-      // ── NAV SCROLL ──
-      const nav = document.getElementById("mainNav");
+<div class="gold-line"></div>
 
-      window.addEventListener("scroll", () => {
-        nav.classList.toggle("scrolled", window.scrollY > 60);
-      });
+<!-- ══ TERÇOS DE SANTOS ══ -->
+<section class="bg-warm">
+  <div class="container">
+    <div class="feature-inner reverse reveal">
+      <div class="feature-img">
+        <img src="imagens/ImagensSaoJose/TercoSaoJose1.png" alt="Terços de Santos" loading="lazy"/>
+      </div>
+      <div class="feature-body">
+        <span class="label">Devoção</span>
+        <h2 class="section-title">Terços de Santos</h2>
+        <p class="section-text">Uma coleção especial inspirada na vida e milagres dos grandes santos da Igreja. Cada peça é uma ponte entre o fiel e a intercessão divina.</p>
+        <ul class="feature-checks">
+          <li>O terço é a arma primordial dos cristãos</li>
+          <li>Cada santo fielmente representado</li>
+        </ul>
+        <a href="pages/santos.html" class="btn btn-gold" style="margin-top:24px;display:inline-block;">
+          Ver Coleção Santos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      // ── HAMBURGER ──
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const mobileClose = document.getElementById("mobileClose");
+<!-- ══ CATEGORIAS ══ -->
+<section class="categories-section">
+  <div class="container">
+    <span class="label reveal">Nossas Coleções</span>
+    <h2 class="section-title reveal">Explore por Categoria</h2>
+    <p class="categories-intro reveal">Peças artesanais organizadas com carinho, para facilitar sua busca pelo produto perfeito.</p>
 
-      hamburger.addEventListener("click", () =>
-        mobileMenu.classList.add("open"),
-      );
+    <div class="cat-grid reveal">
 
-      mobileClose.addEventListener("click", closeMobile);
+      <a href="pages/santos.html" class="cat-card">
+        <div class="cat-card-img">
+          <img src="imagens/ImagensSaoBento/TercoSaoBento1.png" alt="Santos" loading="lazy"/>
+        </div>
+        <div class="cat-card-overlay">
+          <h3>Santos e Espírito Santo</h3>
+          <span>Terços e devocionais</span>
+          <span class="cat-ver">Ver coleção →</span>
+        </div>
+      </a>
 
-      function closeMobile() {
-        mobileMenu.classList.remove("open");
-      }
+      <a href="pages/nossa-senhoras.html" class="cat-card">
+        <div class="cat-card-img">
+          <img src="imagens/ImagensNossaSenhoraAparecida/TercoNossaSenhoraAparecida1.png" alt="Nossa Senhora" loading="lazy"/>
+        </div>
+        <div class="cat-card-overlay">
+          <h3>Nossa Senhoras</h3>
+          <span>Aparecida, Graças, Fátima</span>
+          <span class="cat-ver">Ver coleção →</span>
+        </div>
+      </a>
 
-      // ── REVEAL ON SCROLL ──
-      const reveals = document.querySelectorAll(".reveal");
+      <a href="pages/maes-dindas-noivas.html" class="cat-card">
+        <div class="cat-card-img">
+          <img src="imagens/ImagensMae/TercoMae1.png" alt="Mães, Dindas e Noivas" loading="lazy"/>
+        </div>
+        <div class="cat-card-overlay">
+          <h3>Mães, Dindas e Noivas</h3>
+          <span>Presentes especiais</span>
+          <span class="cat-ver">Ver coleção →</span>
+        </div>
+      </a>
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              setTimeout(() => entry.target.classList.add("visible"), i * 80);
+      <a href="pages/criancas-profissoes.html" class="cat-card">
+        <div class="cat-card-img">
+          <img src="imagens/imagensInfantil/Infantil1.png" alt="Crianças e Profissões" loading="lazy"/>
+        </div>
+        <div class="cat-card-overlay">
+          <h3>Crianças e Profissões</h3>
+          <span>Infantis, anjos, vocações</span>
+          <span class="cat-ver">Ver coleção →</span>
+        </div>
+      </a>
 
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12 },
-      );
+      <a href="pages/braceletes-chaveiros.html" class="cat-card">
+        <div class="cat-card-img">
+          <img src="imagens/imagensBraceletes/Braceletes.png" alt="Braceletes e Chaveiros" loading="lazy"/>
+        </div>
+        <div class="cat-card-overlay">
+          <h3>Braceletes e Chaveiros</h3>
+          <span>Acessórios devocionais</span>
+          <span class="cat-ver">Ver coleção →</span>
+        </div>
+      </a>
 
-      reveals.forEach((el) => observer.observe(el));
+      <a href="pages/braceletes-chaveiros.html#kits" class="cat-card">
+        <div class="cat-card-img">
+          <img src="imagens/ImagensKits/Kit1.png" alt="Kits e Presentes" loading="lazy"/>
+        </div>
+        <div class="cat-card-overlay">
+          <h3>Kits e Presentes</h3>
+          <span>Coleções especiais</span>
+          <span class="cat-ver">Ver coleção →</span>
+        </div>
+      </a>
 
-      // ── ZOOM NAS IMAGENS ──
-      const modal = document.getElementById("imageModal");
-      const modalImg = document.getElementById("modalImage");
-      const closeModal = document.getElementById("closeImageModal");
+    </div>
+  </div>
+</section>
 
-      const zoomImages = document.querySelectorAll(
-        ".feature-img img, .about-img img, .carousel-card img",
-      );
+<!-- ══ SOBRE ══ -->
+<section class="about-section" id="historia">
+  <div class="container">
+    <div class="about-inner reveal">
+      <div class="about-img">
+        <img src="imagens/logo.png" alt="Marisa Cavalhieri" loading="lazy"/>
+        <div class="about-stats">
+          <div class="about-stat">
+            <strong>100%</strong>
+            <span>Artesanal</span>
+          </div>
+          <div class="about-stat">
+            <strong>10+</strong>
+            <span>Anos</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-body">
+        <span class="label">Nossa História</span>
+        <h2 class="section-title">Onde a Oração se Torna Arte</h2>
+        <p class="section-text">À frente desse propósito está Marisa Cavalhieri, de Valparaíso, que transformou sua devoção em missão: levar significado, beleza e espiritualidade a cada pessoa que passa por aqui.</p>
+        <p class="section-text" style="margin-top:12px;">Mais do que uma loja, este é um lugar de encontro com a fé. Sinta-se acolhido para conhecer nossa história e descobrir produtos que inspiram, protegem e acompanham você em sua caminhada espiritual.</p>
+        <a href="#contato" class="btn btn-gold" style="margin-top:32px;display:inline-block;">Fale Conosco</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      zoomImages.forEach((img) => {
-        img.addEventListener("click", () => {
-          modal.classList.add("active");
-          modalImg.src = img.src;
-        });
-      });
+<!-- ══ PAGAMENTOS E ENTREGA ══ -->
+<section class="info-section">
+  <div class="container">
+    <span class="label reveal">Informações</span>
+    <h2 class="section-title reveal">Pagamento e Entrega</h2>
+    <div class="info-grid reveal">
 
-      closeModal.addEventListener("click", () => {
-        modal.classList.remove("active");
-      });
+      <div class="info-card">
+        <span class="info-icon">💳</span>
+        <h3>Formas de Pagamento</h3>
+        <p>Aceitamos diversas formas para sua comodidade:</p>
+        <ul>
+          <li>PIX (à vista com desconto)</li>
+          <li>Cartão de crédito</li>
+          <li>Cartão de débito</li>
+          <li>Transferência bancária</li>
+          <li>Parcelamento disponível</li>
+        </ul>
+      </div>
 
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.classList.remove("active");
-        }
-      });
+      <div class="info-card">
+        <span class="info-icon">📦</span>
+        <h3>Envio e Entrega</h3>
+        <p>Enviamos para todo o Brasil com segurança e cuidado:</p>
+        <ul>
+          <li>Correios PAC e SEDEX</li>
+          <li>Embalagem especial presenteável</li>
+          <li>Rastreamento do pedido</li>
+          <li>Entrega local em Valparaíso-SP</li>
+          <li>Prazo: 3 a 10 dias úteis</li>
+        </ul>
+      </div>
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          modal.classList.remove("active");
-        }
-      });
-    </script>
-  </body>
+      <div class="info-card">
+        <span class="info-icon">✨</span>
+        <h3>Personalização</h3>
+        <p>Cada peça pode ser feita sob medida:</p>
+        <ul>
+          <li>Escolha o santo de devoção</li>
+          <li>Adicione fotos personalizadas</li>
+          <li>Cores e materiais a combinar</li>
+          <li>Mensagem especial incluída</li>
+          <li>Peças em atacado disponíveis</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTATO / NEWSLETTER ══ -->
+<section class="newsletter" id="contato">
+  <div class="container">
+    <span class="label reveal">Marisa Cavalhieri Personalizados</span>
+    <h2 class="section-title reveal">Acompanhe nossas novas criações</h2>
+    <p class="reveal">Seja o primeiro a conhecer nossas peças exclusivas e coleções limitadas.</p>
+    <div class="newsletter-form reveal">
+      <input type="email" placeholder="Seu e-mail"/>
+      <button type="button" onclick="subscribeNewsletter()">Inscrever</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Marisa Cavalhieri</a>
+        <p>Artesanato sacro que transcende gerações, unindo materiais nobres e criação em peças únicas de herança.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="https://wa.me/5518991540737" target="_blank" aria-label="WhatsApp">w</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Coleções</h4>
+        <ul>
+          <li><a href="pages/santos.html">Santos e Espírito Santo</a></li>
+          <li><a href="pages/nossa-senhoras.html">Nossa Senhoras</a></li>
+          <li><a href="pages/maes-dindas-noivas.html">Mães, Dindas e Noivas</a></li>
+          <li><a href="pages/criancas-profissoes.html">Crianças e Profissões</a></li>
+          <li><a href="pages/braceletes-chaveiros.html">Braceletes e Chaveiros</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#historia">Nossa História</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="https://wa.me/5518991540737" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#contato">Política de Envio</a></li>
+          <li><a href="#contato">Trocas e Devoluções</a></li>
+          <li><a href="#contato">Dúvidas Frequentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Marisa Cavalhieri Personalizados. Todos os direitos reservados.</span>
+      <span>Desenvolvido com fé e cuidado. 🙏</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ MODAL DE ZOOM ══ -->
+<div class="image-modal" id="imageModal" role="dialog" aria-modal="true">
+  <button class="image-modal-close" id="closeImageModal" aria-label="Fechar">✕</button>
+  <img id="modalImage" src="" alt="Imagem ampliada"/>
+</div>
+
+<script>
+/* ────────────────────────────────
+   CONFIGURAÇÃO WHATSAPP
+──────────────────────────────── */
+const WHATSAPP = "5518991540737";
+
+/* ────────────────────────────────
+   NAV: scroll shrink + link ativo
+──────────────────────────────── */
+const nav = document.getElementById("mainNav");
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 60);
+  // Link ativo
+  let cur = "";
+  document.querySelectorAll("section[id]").forEach(s => {
+    if (window.scrollY >= s.offsetTop - 90) cur = s.id;
+  });
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    a.classList.toggle("active", a.getAttribute("href") === "#" + cur);
+  });
+}, { passive: true });
+
+/* ────────────────────────────────
+   HAMBÚRGUER com animação X
+──────────────────────────────── */
+const hamburger  = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileClose= document.getElementById("mobileClose");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  if (mobileMenu.classList.contains("open")) {
+    closeMobile();
+  } else {
+    mobileMenu.style.display = "flex";
+    requestAnimationFrame(() => mobileMenu.classList.add("open"));
+    document.body.style.overflow = "hidden";
+  }
+});
+
+mobileClose.addEventListener("click", closeMobile);
+
+function closeMobile() {
+  hamburger.classList.remove("open");
+  mobileMenu.classList.remove("open");
+  document.body.style.overflow = "";
+  setTimeout(() => {
+    if (!mobileMenu.classList.contains("open")) mobileMenu.style.display = "";
+  }, 400);
+}
+window.closeMobile = closeMobile;
+
+/* ────────────────────────────────
+   BOTÕES SOLICITAR PEDIDO → WhatsApp
+   Funciona na index e em qualquer
+   página que carregue este script.
+──────────────────────────────── */
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".btn-solicitar, .btn-acessar");
+  if (!btn) return;
+  e.preventDefault();
+
+  const card     = btn.closest("[data-produto], .cat-card, .card, .card-list");
+  const produto  = btn.dataset.produto
+                || btn.dataset.nome
+                || card?.querySelector("h3,h4")?.innerText
+                || "Produto";
+  const categoria= btn.dataset.categoria || document.title.split("·")[0].trim() || "Geral";
+  const imgEl    = card?.querySelector("img");
+  const imgSrc   = btn.dataset.img || imgEl?.src || "";
+
+  // Gera URL absoluta compatível com Vercel
+  let imgUrl = "";
+  if (imgSrc) {
+    try {
+      imgUrl = new URL(imgSrc, window.location.href).href;
+    } catch { imgUrl = imgSrc; }
+  }
+
+  const msg =
+`Olá, Marisa! Tudo bem? 😊
+
+Meu nome é: _______________
+
+Tenho interesse neste produto:
+📿 *${produto}*
+Categoria: ${categoria}
+
+Gostaria de mais informações sobre:
+• Disponibilidade e prazo
+• Opções de personalização
+• Formas de pagamento${imgUrl ? `\n\n🖼️ Referência: ${imgUrl}` : ""}
+
+Aguardo seu retorno. Obrigada! 🙏`;
+
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+});
+
+/* ────────────────────────────────
+   MODAL DE ZOOM
+──────────────────────────────── */
+const modal    = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.getElementById("closeImageModal");
+
+document.querySelectorAll(".feature-img img, .about-img img, .cat-card-img img").forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener("click", () => {
+    modalImg.src = img.src;
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+function closeModal() {
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+closeBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+/* ────────────────────────────────
+   REVEAL ON SCROLL
+──────────────────────────────── */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add("visible"), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+
+/* ────────────────────────────────
+   NEWSLETTER
+──────────────────────────────── */
+function subscribeNewsletter() {
+  const input = document.querySelector(".newsletter-form input");
+  if (!input.value.trim() || !input.value.includes("@")) {
+    input.style.borderColor = "#e05252";
+    input.focus();
+    return;
+  }
+  const msg = `Olá, Marisa! Gostaria de receber novidades da loja no e-mail: ${input.value}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+}
+window.subscribeNewsletter = subscribeNewsletter;
+</script>
+</body>
 </html>

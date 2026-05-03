@@ -1,198 +1,294 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Santos · Marisa Cavalhieri Personalizados</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link href="../shared/shared.css" rel="stylesheet"/>
-  <style>
-    /* ── Identidade visual: dourado suave, bege e branco ── */
-    :root {
-      --page-bg:       #fdf8f0;
-      --page-bg2:      #f5ede0;
-      --hero-bg:       #2a1e0e;
-      --hero-glow:     rgba(201,168,76,.15);
-      --accent:        #c9a84c;
-      --accent-dark:   #8a6a1e;
-      --accent-border: rgba(201,168,76,.25);
-      --card-bg:       #fffcf5;
-      --card-border:   rgba(201,168,76,.22);
-      --section-title: #2a1f08;
-      --hero-title-color: #fdf8f0;
-      --hero-desc-color:  rgba(253,248,240,.5);
-    }
-    .hero-banner { background: linear-gradient(135deg, #2a1e0e 0%, #3d2b12 100%); }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santos · Marisa Cavalhieri Personalizados</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../shared/shared.css" rel="stylesheet" />
+    <style>
+      /* ── Identidade visual: dourado suave, bege e branco ── */
+      :root {
+        --page-bg: #fdf8f0;
+        --page-bg2: #f5ede0;
+        --hero-bg: #2a1e0e;
+        --hero-glow: rgba(201, 168, 76, 0.15);
+        --accent: #c9a84c;
+        --accent-dark: #8a6a1e;
+        --accent-border: rgba(201, 168, 76, 0.25);
+        --card-bg: #fffcf5;
+        --card-border: rgba(201, 168, 76, 0.22);
+        --section-title: #2a1f08;
+        --hero-title-color: #fdf8f0;
+        --hero-desc-color: rgba(253, 248, 240, 0.5);
+      }
+      .hero-banner {
+        background: linear-gradient(135deg, #2a1e0e 0%, #3d2b12 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="mainNav">
+      <a href="../index.html" class="nav-logo">Marisa Cavalhieri</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
 
-<nav id="mainNav">
-  <a href="../index/index.html" class="nav-logo">Marisa Cavalhieri</a>
-  <ul class="nav-links">
-    <li><a href="../index/index.html">Home</a></li>
+        <li><a href="santos.html" class="active">Santos</a></li>
+        <li><a href="nossa-senhoras.html">N. Senhoras</a></li>
+        <li><a href="maes-dindas-noivas.html">Mães & Noivas</a></li>
+        <li><a href="criancas-profissoes.html">Crianças</a></li>
+        <li><a href="braceletes-chaveiros.html">Braceletes</a></li>
+      </ul>
+      <div class="nav-actions">
+        <svg viewBox="0 0 24 24" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
 
-    <li><a href="santos.html" class="active">Santos</a></li>
-    <li><a href="nossa-senhoras.html">N. Senhoras</a></li>
-    <li><a href="maes-dindas-noivas.html">Mães & Noivas</a></li>
-    <li><a href="criancas-profissoes.html">Crianças</a></li>
-    <li><a href="braceletes-chaveiros.html">Braceletes</a></li>
-  </ul>
-  <div class="nav-actions">
-    <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <a href="index.html" onclick="closeMobile()">Home</a>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
-  <a href="../index/index.html"           onclick="closeMobile()">Home</a>
-  <a href="../produtos/produtos.html"     onclick="closeMobile()">Coleção</a>
-  <a href="santos.html"                   onclick="closeMobile()">Santos</a>
-  <a href="nossa-senhoras.html"           onclick="closeMobile()">Nossa Senhoras</a>
-  <a href="maes-dindas-noivas.html"       onclick="closeMobile()">Mães, Dindas e Noivas</a>
-  <a href="criancas-profissoes.html"      onclick="closeMobile()">Crianças e Profissões</a>
-  <a href="braceletes-chaveiros.html"     onclick="closeMobile()">Braceletes e Chaveiros</a>
-</div>
+      <a href="santos.html" onclick="closeMobile()">Santos</a>
+      <a href="nossa-senhoras.html" onclick="closeMobile()">Nossa Senhoras</a>
+      <a href="maes-dindas-noivas.html" onclick="closeMobile()"
+        >Mães, Dindas e Noivas</a
+      >
+      <a href="criancas-profissoes.html" onclick="closeMobile()"
+        >Crianças e Profissões</a
+      >
+      <a href="braceletes-chaveiros.html" onclick="closeMobile()"
+        >Braceletes e Chaveiros</a
+      >
+    </div>
 
-<div class="hero-banner">
-  <span class="hero-ornament">✦ ✦ ✦</span>
-  <span class="hero-label">Artesanato Devocional</span>
-  <h1 class="hero-title">Terços dos Santos</h1>
-  <p class="hero-desc">Peças únicas que honram a vida e os milagres dos grandes intercessores da fé cristã, criadas com devoção e materiais nobres.</p>
-</div>
+    <div class="hero-banner">
+      <span class="hero-ornament">✦ ✦ ✦</span>
+      <span class="hero-label">Artesanato Devocional</span>
+      <h1 class="hero-title">Terços dos Santos</h1>
+      <p class="hero-desc">
+        Peças únicas que honram a vida e os milagres dos grandes intercessores
+        da fé cristã, criadas com devoção e materiais nobres.
+      </p>
+    </div>
 
-<!-- Catálogo montado via JS -->
-<div id="catalog-root"></div>
+    <!-- Catálogo montado via JS -->
+    <div id="catalog-root"></div>
 
-<!-- Chamada final -->
-<div class="newsletter reveal">
-  <span class="newsletter-icon">🕊️</span>
-  <h2>Peças com Alma e Devoção</h2>
-  <h3>Cada terço carrega a proteção do seu santo de devoção.</h3>
-  <p>Personalize com o seu santo favorito ou encomende uma peça especial para presentear alguém querido.</p>
-</div>
+    <!-- Chamada final -->
+    <div class="newsletter reveal">
+      <span class="newsletter-icon">🕊️</span>
+      <h2>Peças com Alma e Devoção</h2>
+      <h3>Cada terço carrega a proteção do seu santo de devoção.</h3>
+      <p>
+        Personalize com o seu santo favorito ou encomende uma peça especial para
+        presentear alguém querido.
+      </p>
+    </div>
 
-<footer>
-  <span class="footer-copy">© 2024 Marisa Cavalhieri Personalizados</span>
-  <div class="footer-links">
-    <a href="#">Política</a><a href="#">Envio</a><a href="#">Sobre</a>
-  </div>
-</footer>
+    <footer>
+      <span class="footer-copy">© 2024 Marisa Cavalhieri Personalizados</span>
+      <div class="footer-links">
+        <a href="#">Política</a><a href="#">Envio</a><a href="#">Sobre</a>
+      </div>
+    </footer>
 
-<!-- Modal de zoom -->
-<div class="img-modal" id="imgModal">
-  <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
-  <button class="modal-prev"  id="modalPrev"  aria-label="Anterior">‹</button>
-  <div class="img-modal-inner">
-    <img class="modal-img" src="" alt="" style="transition:opacity .2s,transform .35s cubic-bezier(.4,0,.2,1)"/>
-  </div>
-  <button class="modal-next" id="modalNext" aria-label="Próximo">›</button>
-  <div class="modal-counter"></div>
-</div>
+    <!-- Modal de zoom -->
+    <div class="img-modal" id="imgModal">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+      <button class="modal-prev" id="modalPrev" aria-label="Anterior">‹</button>
+      <div class="img-modal-inner">
+        <img
+          class="modal-img"
+          src=""
+          alt=""
+          style="
+            transition:
+              opacity 0.2s,
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          "
+        />
+      </div>
+      <button class="modal-next" id="modalNext" aria-label="Próximo">›</button>
+      <div class="modal-counter"></div>
+    </div>
 
-<script src="../shared/shared.js"></script>
-<script>
-const IMAGES_ROOT = "../imagens";
+    <script src="../shared/shared.js"></script>
+    <script>
+      const IMAGES_ROOT = "../imagens";
 
-const catalog = {
-  sections: [
-    {
-      id: "sao-bento", cols: 4,
-      title: "São Bento",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço São Bento", folder: "ImagensSaoBento", price: "R$ 70,00",
-        sub: "Proteção e bênção em cada conta artesanal",
-        images: ["TercoSaoBento1.png","TercoSaoBento2.png","TercoSaoBento3.png","TercoSaoBentor4.png"]
-      }]
-    },
-    {
-      id: "sao-jose", cols: 3,
-      title: "São José",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço São José", folder: "ImagensSaoJose", price: "R$ 70,00",
-        sub: "O protetor dos trabalhadores e das famílias",
-        images: ["TercoSaoJose1.png","TercoSaoJose2.png","TercoSaoJose3.png","TercoSaoJose4.png","TercoSaoJose5.png","TercoSaoJose6.png"]
-      }]
-    },
-    {
-      id: "santa-rita", cols: 3,
-      title: "Santa Rita de Cássia",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço Santa Rita de Cássia", folder: "ImagensSantaRitaDeCassia", price: "R$ 70,00",
-        sub: "A santa dos impossíveis — fé que transforma",
-        images: ["TercoSantaRitaDeCassia1.png","TercoSantaRitaDeCassia2.png"]
-      }]
-    },
-    {
-      id: "sao-miguel", cols: 3,
-      title: "São Miguel Arcanjo",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço São Miguel Arcanjo", folder: "ImagensSaoMiguel", price: "R$ 70,00",
-        sub: "Proteção e força do arcanjo guerreiro",
-        images: ["TercoSaoMiguel1.png"]
-      }]
-    },
-    {
-      id: "santa-teresinha", cols: 3,
-      title: "Santa Teresinha",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço Santa Teresinha", folder: "TercoSantaTeresinha", price: "R$ 70,00",
-        sub: "O caminhar singelo e o amor sem medida",
-        images: ["TercoSantaTeresinha1.png","TercoSantaTeresinha2.png"]
-      }]
-    },
-    {
-      id: "santissima-trindade", cols: 3,
-      title: "Santíssima Trindade",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço Santíssima Trindade", folder: "ImagensSantissimaTrindade", price: "R$ 70,00",
-        sub: "Pai, Filho e Espírito Santo — fé trinitária",
-        images: ["TercoSantissimaTrindade1.png"]
-      }]
-    },
-    {
-      id: "espirito-santo", cols: 4,
-      title: "Divino Espírito Santo",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço Espírito Santo", folder: "ImagensEspiritoSanto", price: "R$ 70,00",
-        sub: "Luz, sabedoria e graça divina em cada peça",
-        images: ["TercoEspiritoSanto1.png","TercoEspiritoSanto2.png","TercoEspiritoSanto3.png","TercoEspiritoSanto4.png"]
-      }]
-    },
-    {
-      id: "jesus", cols: 3,
-      title: "Imagens de Jesus",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço Imagens de Jesus", folder: "ImagensJesus", price: "R$ 70,00",
-        sub: "A presença amorosa de Cristo em cada conta",
-        images: ["TercoImagensDeJesus1.png"]
-      }]
-    },
-    {
-      id: "padre-pio", cols: 3,
-      title: "Padre Pio",
-      subtitle: "· Terços",
-      groups: [{
-        label: "Terço Padre Pio", folder: "ImagensPadre", price: "R$ 70,00",
-        sub: "O estigmatizado que curou com fé e oração",
-        images: ["TercoPadre1.png"]
-      }]
-    },
-  ]
-};
+      const catalog = {
+        sections: [
+          {
+            id: "sao-bento",
+            cols: 4,
+            title: "São Bento",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço São Bento",
+                folder: "ImagensSaoBento",
+                price: "R$ 70,00",
+                sub: "Proteção e bênção em cada conta artesanal",
+                images: [
+                  "TercoSaoBento1.png",
+                  "TercoSaoBento2.png",
+                  "TercoSaoBento3.png",
+                  "TercoSaoBentor4.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "sao-jose",
+            cols: 3,
+            title: "São José",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço São José",
+                folder: "ImagensSaoJose",
+                price: "R$ 70,00",
+                sub: "O protetor dos trabalhadores e das famílias",
+                images: [
+                  "TercoSaoJose1.png",
+                  "TercoSaoJose2.png",
+                  "TercoSaoJose3.png",
+                  "TercoSaoJose4.png",
+                  "TercoSaoJose5.png",
+                  "TercoSaoJose6.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "santa-rita",
+            cols: 3,
+            title: "Santa Rita de Cássia",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Santa Rita de Cássia",
+                folder: "ImagensSantaRitaDeCassia",
+                price: "R$ 70,00",
+                sub: "A santa dos impossíveis — fé que transforma",
+                images: [
+                  "TercoSantaRitaDeCassia1.png",
+                  "TercoSantaRitaDeCassia2.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "sao-miguel",
+            cols: 3,
+            title: "São Miguel Arcanjo",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço São Miguel Arcanjo",
+                folder: "ImagensSaoMiguel",
+                price: "R$ 70,00",
+                sub: "Proteção e força do arcanjo guerreiro",
+                images: ["TercoSaoMiguel1.png"],
+              },
+            ],
+          },
+          {
+            id: "santa-teresinha",
+            cols: 3,
+            title: "Santa Teresinha",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Santa Teresinha",
+                folder: "TercoSantaTeresinha",
+                price: "R$ 70,00",
+                sub: "O caminhar singelo e o amor sem medida",
+                images: [
+                  "TercoSantaTeresinha1.png",
+                  "TercoSantaTeresinha2.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "santissima-trindade",
+            cols: 3,
+            title: "Santíssima Trindade",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Santíssima Trindade",
+                folder: "ImagensSantissimaTrindade",
+                price: "R$ 70,00",
+                sub: "Pai, Filho e Espírito Santo — fé trinitária",
+                images: ["TercoSantissimaTrindade1.png"],
+              },
+            ],
+          },
+          {
+            id: "espirito-santo",
+            cols: 4,
+            title: "Divino Espírito Santo",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Espírito Santo",
+                folder: "ImagensEspiritoSanto",
+                price: "R$ 70,00",
+                sub: "Luz, sabedoria e graça divina em cada peça",
+                images: [
+                  "TercoEspiritoSanto1.png",
+                  "TercoEspiritoSanto2.png",
+                  "TercoEspiritoSanto3.png",
+                  "TercoEspiritoSanto4.png",
+                ],
+              },
+            ],
+          },
+          {
+            id: "jesus",
+            cols: 3,
+            title: "Imagens de Jesus",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Imagens de Jesus",
+                folder: "ImagensJesus",
+                price: "R$ 70,00",
+                sub: "A presença amorosa de Cristo em cada conta",
+                images: ["TercoImagensDeJesus1.png"],
+              },
+            ],
+          },
+          {
+            id: "padre-pio",
+            cols: 3,
+            title: "Padre Pio",
+            subtitle: "· Terços",
+            groups: [
+              {
+                label: "Terço Padre Pio",
+                folder: "ImagensPadre",
+                price: "R$ 70,00",
+                sub: "O estigmatizado que curou com fé e oração",
+                images: ["TercoPadre1.png"],
+              },
+            ],
+          },
+        ],
+      };
 
-initPage(catalog, IMAGES_ROOT);
-</script>
-</body>
+      initPage(catalog, IMAGES_ROOT);
+    </script>
+  </body>
 </html>

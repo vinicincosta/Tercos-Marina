@@ -10,7 +10,7 @@
  */
 
 /* ── Número WhatsApp da vendedora ── */
-const WHATSAPP_NUMBER = "5518991540737";
+const WHATSAPP_NUMBER = "5518991540737"; // Número da vendedora
 
 /* ════════════════════════════════════
    NAV: destaque de link ativo + mobile
@@ -140,28 +140,35 @@ function initWhatsApp() {
     const btn = e.target.closest(".btn-acessar");
     if (!btn) return;
     e.preventDefault();
-    const card    = btn.closest(".card, .card-list");
-    const produto = btn.dataset.produto || card?.querySelector("h3,h4")?.innerText || "Produto";
+    const card      = btn.closest(".card, .card-list");
+    const produto   = btn.dataset.produto || card?.querySelector("h3,h4")?.innerText || "Produto";
+    const categoria = btn.dataset.categoria
+                   || document.querySelector(".hero-title")?.innerText?.split("\n")?.[0]
+                   || document.title.split("·")?.[0]?.trim()
+                   || "Geral";
     const imgEl   = card?.querySelector("img");
     const imgSrc  = btn.dataset.img || imgEl?.src || "";
-    const imgUrl  = imgSrc.startsWith("http")
-      ? imgSrc
-      : window.location.origin + imgSrc.replace(/^\.?\.?\/?/, "/");
+
+    // URL absoluta — funciona em Vercel e qualquer hospedagem
+    let imgUrl = "";
+    if (imgSrc) {
+      try { imgUrl = new URL(imgSrc, window.location.href).href; }
+      catch { imgUrl = imgSrc; }
+    }
 
     const msg =
 `Olá, Marisa! Tudo bem? 😊
 
 Meu nome é: _______________
 
-Tenho interesse no seguinte produto:
-✨ *${produto}*
+Tenho interesse neste produto:
+📿 *${produto}*
+Categoria: ${categoria}
 
 Gostaria de saber mais sobre:
 • Disponibilidade e prazo de entrega
 • Opções de personalização
-• Formas de pagamento
-
-🖼️ Referência: ${imgUrl}
+• Formas de pagamento${imgUrl ? `\n\n🖼️ Referência: ${imgUrl}` : ""}
 
 Aguardo seu retorno. Obrigada! 🙏`;
 
